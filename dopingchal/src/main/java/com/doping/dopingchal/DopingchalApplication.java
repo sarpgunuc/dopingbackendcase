@@ -10,6 +10,7 @@ public class DopingchalApplication {
 		SpringApplication.run(DopingchalApplication.class, args);
 		
 		System.out.println("projeye başlıyoruz !!");
+		System.out.println("Commit deneme");
 	}
 
 }
