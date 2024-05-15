@@ -9,5 +9,5 @@ import com.doping.dopingchal.model.*;
 
 @Repository
 public interface StudentRepository extends JpaRepository<Student,Long> {
-    Optional<Student> findByUsername(String username);
+    Optional<Student> findByUsername(String userName);
 }

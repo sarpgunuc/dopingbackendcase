@@ -10,95 +10,65 @@ import jakarta.persistence.OneToMany;
 
 @Entity
 public class Student {
-	
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id; 
-	
-	
-	private String firstName;
-	private String lastName; 
-	private String userName;
-	private String passwords;
-	
-	
-	@OneToMany(mappedBy = "student")
+    
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id; 
+    
+    private String firstName;
+    private String lastName; 
+    private String username;  
+    private String password;  
+    
+    @OneToMany(mappedBy = "student")
     private List<TestResult> testResults;
 
+    
+    public Long getId() {
+        return id;
+    }
 
-	
-	
-	
-	
-	
-	
-	
-	
-	public Long getId() {
-		return id;
-	}
+    public void setId(Long id) {
+        this.id = id;
+    }
 
+    public String getFirstName() {
+        return firstName;
+    }
 
-	public void setId(Long id) {
-		this.id = id;
-	}
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
 
+    public String getLastName() {
+        return lastName;
+    }
 
-	public String getFirstName() {
-		return firstName;
-	}
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
 
+    public String getUsername() {
+        return username;
+    }
 
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
+    public void setUsername(String username) {
+        this.username = username;
+    }
 
+    public String getPassword() {
+        return password;
+    }
 
-	public String getLastName() {
-		return lastName;
-	}
+    public void setPassword(String password) {
+        this.password = password;
+    }
 
+    public List<TestResult> getTestResults() {
+        return testResults;
+    }
 
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
-
-
-	public String getUserName() {
-		return userName;
-	}
-
-
-	public void setUserName(String userName) {
-		this.userName = userName;
-	}
-
-
-	public String getPasswords() {
-		return passwords;
-	}
-
-
-	public void setPasswords(String passwords) {
-		this.passwords = passwords;
-	}
-
-
-	public List<TestResult> getTestResults() {
-		return testResults;
-	}
-
-
-	public void setTestResults(List<TestResult> testResults) {
-		this.testResults = testResults;
-	}
-	
-	
-	
-	
-	
-	
-	
-	
-
+    public void setTestResults(List<TestResult> testResults) {
+        this.testResults = testResults;
+    }
 }
